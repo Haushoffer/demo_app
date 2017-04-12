@@ -10,9 +10,10 @@
   <%= @user.email %>
 </p>
 <p>
-  <strong>Posts:</strong>
-  
-	 <%= @user.microposts %>
+	   <% if @user.microposts.first != nil %>
+ 		    <strong>First micropost:</strong>
+     		<%= @user.microposts.first.content %>
+  	   <% end %>
 </p>
 
 
